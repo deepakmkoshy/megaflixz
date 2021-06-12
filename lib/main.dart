@@ -9,9 +9,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'MegaFlixz',
+      title: 'Megaflixz',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        appBarTheme: AppBarTheme(color: Color(0xffea4335))
+        // primarySwatch: ,
       ),
       home: HomePage(),
     );
