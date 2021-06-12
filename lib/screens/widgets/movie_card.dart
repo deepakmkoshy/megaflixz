@@ -32,6 +32,7 @@ class MovieCard extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Text(
               movieModel.title,
+              overflow: TextOverflow.ellipsis,
               style: TextStyle(fontSize: 12),
             ),
           )

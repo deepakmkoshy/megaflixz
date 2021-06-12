@@ -1,32 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:megaflixz/data/tmdb.dart';
+import 'package:megaflixz/data/movie_based_on_genre.dart';
 import 'package:megaflixz/models/movie.dart';
 import 'package:megaflixz/screens/widgets/drawer.dart';
 import 'package:megaflixz/screens/widgets/movie_card.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class MovieDisplay extends StatefulWidget {
+  final int genreid;
+  final String genreName;
+  const MovieDisplay({Key? key, required this.genreid, required this.genreName})
+      : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _MovieDisplayState createState() => _MovieDisplayState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _MovieDisplayState extends State<MovieDisplay> {
   List<MovieModel> moviesLists = [];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Megaflixz'),
+        title: Text(widget.genreName),
         centerTitle: true,
       ),
       drawer: DrawerWid(),
       body: FutureBuilder(
-        future: TMDB().getData(),
+        future: MovieGenre(genreId: widget.genreid).getData(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
-          if (!snapshot.hasData)
-            return Center(child: CircularProgressIndicator());
+          if (!snapshot.hasData) return Center(child: CircularProgressIndicator());
           moviesLists = snapshot.data.movieList;
           return GridView.builder(
               padding: EdgeInsets.all(16.0),

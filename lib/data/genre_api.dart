@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:megaflixz/models/genres.dart';
-import 'package:megaflixz/models/movie.dart';
 
 // void main() {
 //   GenreApi().getData();
