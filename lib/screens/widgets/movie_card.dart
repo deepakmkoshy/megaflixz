@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:megaflixz/models/movie.dart';
+import 'package:megaflixz/screens/movie_detailed.dart';
 
 class MovieCard extends StatelessWidget {
   final MovieModel movieModel;
@@ -11,7 +12,13 @@ class MovieCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return GestureDetector(
+      onTap: (){
+        
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (ctxt) => MovieDetailed(model: movieModel,)));
+              
+      },
       // padding: EdgeInsets.all(16.0),
       // height: 300,
       // decoration: BoxDecoration(

@@ -22,7 +22,6 @@ class TMDB {
       MovieList model = MovieList.fromJson(json['results']);
       print(model.movieList.length);
       return model;
-      // print(json['results'][0]['original_language']);
     }
   }
 }
