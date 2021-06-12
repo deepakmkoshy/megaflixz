@@ -3,9 +3,9 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:megaflixz/models/movie.dart';
 
-void main() {
-  TMDB().getData();
-}
+// void main() {
+//   TMDB().getData();
+// }
 
 class TMDB {
   final String url;
@@ -21,6 +21,7 @@ class TMDB {
       dynamic json = jsonDecode(data);
       MovieList model = MovieList.fromJson(json['results']);
       print(model.movieList.length);
+      return model;
       // print(json['results'][0]['original_language']);
     }
   }
