@@ -28,16 +28,17 @@ class _MovieDisplayState extends State<MovieDisplay> {
       body: FutureBuilder(
         future: MovieGenre(genreId: widget.genreid).getData(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
-          if (!snapshot.hasData) return Center(child: CircularProgressIndicator());
+          if (!snapshot.hasData)
+            return Center(child: CircularProgressIndicator());
           moviesLists = snapshot.data.movieList;
           return GridView.builder(
               padding: EdgeInsets.all(16.0),
               itemCount: moviesLists.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  mainAxisSpacing: 15,
+                  mainAxisSpacing: 5,
                   crossAxisSpacing: 15,
                   crossAxisCount: 2,
-                  childAspectRatio: 8 / 12),
+                  childAspectRatio: 7.5 / 12),
               itemBuilder: (BuildContext context, int index) {
                 return MovieCard(movieModel: moviesLists[index]);
               });

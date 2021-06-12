@@ -32,10 +32,10 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.all(16.0),
               itemCount: moviesLists.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  mainAxisSpacing: 15,
+                  mainAxisSpacing: 5,
                   crossAxisSpacing: 15,
                   crossAxisCount: 2,
-                  childAspectRatio: 8 / 12),
+                  childAspectRatio: 7.5 / 12),
               itemBuilder: (BuildContext context, int index) {
                 return MovieCard(movieModel: moviesLists[index]);
               });

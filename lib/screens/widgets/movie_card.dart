@@ -13,11 +13,11 @@ class MovieCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // padding: EdgeInsets.all(16.0),
-      // height: 200,
-      decoration: BoxDecoration(
-        // color: Colors.orange,
-        borderRadius: BorderRadius.circular(16.0),
-      ),
+      // height: 300,
+      // decoration: BoxDecoration(
+      //   // color: Colors.orange,
+      //   borderRadius: BorderRadius.circular(16.0),
+      // ),
       child: Column(
         children: [
           ClipRRect(
@@ -29,13 +29,14 @@ class MovieCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.fromLTRB(10.0, 4.0, 0, 0),
             child: Text(
               movieModel.title,
+              maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(fontSize: 12),
+              style: TextStyle(fontSize: 14),
             ),
-          )
+          ),
         ],
       ),
     );

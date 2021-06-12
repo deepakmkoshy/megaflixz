@@ -22,9 +22,13 @@ class MovieModel {
   });
 
   factory MovieModel.fromJson(Map<String, dynamic> parsedJson) {
+    print(parsedJson['original_title']);
+    print(parsedJson['poster_path']);
+
     return MovieModel(
         title: parsedJson['original_title'],
         overview: parsedJson['overview'],
-        imgPath: parsedJson['poster_path']);
+        imgPath:
+            parsedJson['poster_path'] ?? '/q719jXXEzOoYaps6babgKnONONX.jpg');
   }
 }
