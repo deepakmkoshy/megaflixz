@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:megaflixz/data/movie_based_on_genre.dart';
 import 'package:megaflixz/models/movie.dart';
+import 'package:megaflixz/screens/watch_later.dart';
 import 'package:megaflixz/screens/widgets/drawer.dart';
 import 'package:megaflixz/screens/widgets/movie_card.dart';
 
@@ -21,6 +22,14 @@ class _MovieDisplayState extends State<MovieDisplay> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (ctxt) => WatchLater()));
+              },
+              icon: Icon(Icons.movie))
+        ],
         title: Text(widget.genreName),
         centerTitle: true,
       ),
