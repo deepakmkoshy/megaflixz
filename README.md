@@ -18,7 +18,7 @@ MegaflixZ is a movie app for the movie lover in you. It is an app that displays 
 
 ## Link to product development video
 
-[Project Walkthrough and Code Explanation](https://www.instagram.com/tv/CQBnp2Th1Km/)
+[Check out the IGTV Video](https://www.instagram.com/tv/CQBnp2Th1Km/)
 
 ## How it Works ?
 
