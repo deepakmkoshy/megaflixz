@@ -14,7 +14,7 @@ MegaflixZ is a movie app for the movie lover in you. It is an app that displays 
 2. [Adithyan Babu](https://www.linkedin.com/in/adithyan-babu-294759214/)
 3. [Christa Maria Joby](https://www.linkedin.com/in/christa-maria-joby-271807204/)
 4. [Julia Alex](https://www.linkedin.com/in/julia-alex-455045212/)
-5. Rohan U S
+5. [Rohan U S](https://www.linkedin.com/in/rohan-u-s-5257b3161/)
 
 ## Link to product development video
 
